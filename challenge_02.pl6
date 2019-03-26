@@ -8,9 +8,9 @@ sub fizzbuzz(Int $n) {
     return join ' ',
     gather {
         given $n {
-            when * %% 2 { take 'fizz'; proceed; }
-            when * %% 3 { take 'buzz' }
-            when * %% 2 { succeed; }
+            when * %% 3 { take 'fizz'; proceed; }
+            when * %% 5 { take 'buzz' }
+            when * %% 3 { succeed; }
             default     { take $n }
         }
     }
